@@ -1,0 +1,28 @@
+#continue config 
+name: My Config
+version: 1.0.0
+schema: v1
+
+models:
+  - name: gpt-5.1
+    provider: openai
+    model: gpt-5.1
+    apiKey: sk-proj-
+    roles:
+      - chat
+
+  - name: gpt-5.1-mini
+    provider: openai
+    model: gpt-5.1-mini
+    apiKey: sk-proj-
+    roles:
+      - chat
+
+mcpServers:
+  - name: dtrack
+    command: /Users/nuri/Desktop/latest_dtrack_mcp/venv/bin/python
+    args:
+      - /Users/nuri/Desktop/latest_dtrack_mcp/server.py
+    env:
+      DTRACK_URL: "http://localhost:8081"
+      DTRACK_API_KEY: ""
